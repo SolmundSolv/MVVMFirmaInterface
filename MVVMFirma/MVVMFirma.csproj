@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{435572FA-D2A2-48CA-B905-4A7899337063}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MVVMFirma</RootNamespace>
+    <AssemblyName>MVVMFirma</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Maps.MapControl.WPF">
+      <HintPath>C:\Program Files (x86)\Bing Maps WPF Control\V1\Libraries\Microsoft.Maps.MapControl.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helper\BaseCommand.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\BazaDanychViewModel.cs" />
+    <Compile Include="ViewModels\CommandViewModel.cs" />
+    <Compile Include="ViewModels\MagazynyViewModel.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\MapaViewModel.cs" />
+    <Compile Include="ViewModels\NowaFakturaViewModel.cs" />
+    <Compile Include="ViewModels\NowyPracownikViewModel.cs" />
+    <Compile Include="ViewModels\NowyTowarViewModel.cs" />
+    <Compile Include="ViewModels\RaportyViewModel.cs" />
+    <Compile Include="ViewModels\WorkspaceViewModel.cs" />
+    <Compile Include="ViewModels\WszystkieTowaryViewModel.cs" />
+    <Compile Include="Views\BazaDanychView.xaml.cs">
+      <DependentUpon>BazaDanychView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MagazynyView.xaml.cs">
+      <DependentUpon>MagazynyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MapaView.xaml.cs">
+      <DependentUpon>MapaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NowaFakturaView.xaml.cs">
+      <DependentUpon>NowaFakturaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NowyPracownikView.xaml.cs">
+      <DependentUpon>NowyPracownikView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NowyTowarView.xaml.cs">
+      <DependentUpon>NowyTowarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RaportyView.xaml.cs">
+      <DependentUpon>RaportyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WszystkieTowaryView.xaml.cs">
+      <DependentUpon>WszystkieTowaryView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\BazaDanychView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MagazynyDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MagazynyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MapaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NowyPracownikView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NowyTowarDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RaportyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StylZakladek.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindowResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NowaFakturaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NowyTowarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WszystkieTowaryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ModelS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ics\aeroplane.png" />
+    <Resource Include="Ics\barcode.png" />
+    <Resource Include="Ics\box-1.png" />
+    <Resource Include="Ics\box.png" />
+    <Resource Include="Ics\boxes.png" />
+    <Resource Include="Ics\calendar.png" />
+    <Resource Include="Ics\clipboard.png" />
+    <Resource Include="Ics\container.png" />
+    <Resource Include="Ics\delivery-1.png" />
+    <Resource Include="Ics\delivery-2.png" />
+    <Resource Include="Ics\delivery-3.png" />
+    <Resource Include="Ics\delivery-truck.png" />
+    <Resource Include="Ics\delivery.png" />
+    <Resource Include="Ics\envelope.png" />
+    <Resource Include="Ics\find.png" />
+    <Resource Include="Ics\fragile.png" />
+    <Resource Include="Ics\gift.png" />
+    <Resource Include="Ics\laptop.png" />
+    <Resource Include="Ics\package-1.png" />
+    <Resource Include="Ics\package-2.png" />
+    <Resource Include="Ics\package-3.png" />
+    <Resource Include="Ics\package-4.png" />
+    <Resource Include="Ics\package-5.png" />
+    <Resource Include="Ics\package-6.png" />
+    <Resource Include="Ics\package-7.png" />
+    <Resource Include="Ics\package.png" />
+    <Resource Include="Ics\route.png" />
+    <Resource Include="Ics\safety.png" />
+    <Resource Include="Ics\ship.png" />
+    <Resource Include="Ics\shipping.png" />
+    <Resource Include="Ics\smartphone.png" />
+    <Resource Include="Ics\stroller.png" />
+    <Resource Include="Ics\support.png" />
+    <Resource Include="Ics\train.png" />
+    <Resource Include="Ics\up.png" />
+    <Resource Include="Ics\warehouse-1.png" />
+    <Resource Include="Ics\warehouse-2.png" />
+    <Resource Include="Ics\warehouse.png" />
+    <Resource Include="Ics\weight.png" />
+    <Resource Include="Ics\worldwide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ics\001-lifesaver.png" />
+    <Resource Include="Ics\002-info.png" />
+    <Resource Include="Ics\003-phone call.png" />
+    <Resource Include="Ics\004-info.png" />
+    <Resource Include="Ics\005-manual.png" />
+    <Resource Include="Ics\006-telephone.png" />
+    <Resource Include="Ics\007-manual.png" />
+    <Resource Include="Ics\008-manual.png" />
+    <Resource Include="Ics\009-chat bubble.png" />
+    <Resource Include="Ics\010-settings.png" />
+    <Resource Include="Ics\011-info.png" />
+    <Resource Include="Ics\012-manual.png" />
+    <Resource Include="Ics\013-customer service.png" />
+    <Resource Include="Ics\014-customer service.png" />
+    <Resource Include="Ics\015-phone call.png" />
+    <Resource Include="Ics\016-settings.png" />
+    <Resource Include="Ics\017-question.png" />
+    <Resource Include="Ics\018-settings.png" />
+    <Resource Include="Ics\019-info.png" />
+    <Resource Include="Ics\020-settings.png" />
+    <Resource Include="Ics\021-info.png" />
+    <Resource Include="Ics\022-wrench.png" />
+    <Resource Include="Ics\023-calendar.png" />
+    <Resource Include="Ics\024-info.png" />
+    <Resource Include="Ics\025-manual.png" />
+    <Resource Include="Ics\026-chat bubble.png" />
+    <Resource Include="Ics\027-customer service.png" />
+    <Resource Include="Ics\028-settings.png" />
+    <Resource Include="Ics\029-settings.png" />
+    <Resource Include="Ics\030-chronometer.png" />
+    <Resource Include="Ics\031-info.png" />
+    <Resource Include="Ics\032-telephone.png" />
+    <Resource Include="Ics\033-chat bubble.png" />
+    <Resource Include="Ics\034-manual.png" />
+    <Resource Include="Ics\035-info.png" />
+    <Resource Include="Ics\036-report.png" />
+    <Resource Include="Ics\037-clock.png" />
+    <Resource Include="Ics\038-customer service.png" />
+    <Resource Include="Ics\039-phone list.png" />
+    <Resource Include="Ics\040-megaphone.png" />
+    <Resource Include="Ics\041-screwdriver.png" />
+    <Resource Include="Ics\042-sandclock.png" />
+    <Resource Include="Ics\043-phone call.png" />
+    <Resource Include="Ics\044-shield.png" />
+    <Resource Include="Ics\045-info.png" />
+    <Resource Include="Ics\046-customer service.png" />
+    <Resource Include="Ics\047-settings.png" />
+    <Resource Include="Ics\048-lifesaver.png" />
+    <Resource Include="Ics\049-clock.png" />
+    <Resource Include="Ics\050-info.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

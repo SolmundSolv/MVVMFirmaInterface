@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="MVVMFirma.Views.MagazynyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MVVMFirma.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary Source="MagazynyDictionary.xaml"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--Wiersz1-->
+            <DataGrid Grid.Row="0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id"/>
+                    <DataGridTextColumn Header="Nazwa"/>
+                    <DataGridTextColumn Header="Lokalizacja"/>
+                    <DataGridTextColumn Header="Pojemność"/>
+                    <DataGridTextColumn Header="Zajęte"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Schemant numeracji:" Style="{StaticResource LabelStandardowy}"/>
+                    <ComboBox Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="3" Margin="3" Style="{StaticResource ComboBoxStandardowy}"/>
+
+                    <CheckBox Grid.Row="1" Grid.Column="0" Style="{StaticResource CheckboxStandardowy}"/>
+                    <CheckBox Grid.Row="2" Grid.Column="0" Style="{StaticResource CheckboxStandardowy}"/>
+                    <CheckBox Grid.Row="3" Grid.Column="0" Style="{StaticResource CheckboxStandardowy}"/>
+                    <CheckBox Grid.Row="4" Grid.Column="0" Style="{StaticResource CheckboxStandardowy}"/>
+
+                    <Label Grid.Row="1" Grid.Column="1" Content="Numery" Style="{StaticResource LabelStandardowy}"/>
+                    <Label Grid.Row="2" Grid.Column="1" Content="Pojemnosc" Style="{StaticResource LabelStandardowy}"/>
+                    <Label Grid.Row="3" Grid.Column="1" Content="Wolne miejsce" Style="{StaticResource LabelStandardowy}"/>
+                    <Label Grid.Row="4" Grid.Column="1" Content="Kwota" Style="{StaticResource LabelStandardowy}"/>
+
+                    <Label Grid.Row="1" Grid.Column="2" Content="od:" Style="{StaticResource LabelStandardowy}"/>
+                    <Label Grid.Row="2" Grid.Column="2" Content="od:" Style="{StaticResource LabelStandardowy}"/>
+                    <Label Grid.Row="3" Grid.Column="2" Content="od:" Style="{StaticResource LabelStandardowy}"/>
+                    <Label Grid.Row="4" Grid.Column="2" Content="od:" Style="{StaticResource LabelStandardowy}"/>
+
+                    <ComboBox Grid.Row="1" Grid.Column="3" Style="{StaticResource ComboBoxStandardowy}"/>
+                    <ComboBox Grid.Row="2" Grid.Column="3" Style="{StaticResource ComboBoxStandardowy}"/>
+                    <ComboBox Grid.Row="3" Grid.Column="3" Style="{StaticResource ComboBoxStandardowy}"/>
+                    <ComboBox Grid.Row="4" Grid.Column="3" Style="{StaticResource ComboBoxStandardowy}"/>
+
+                    <Label Grid.Row="1" Grid.Column="4" Content="do:" Style="{StaticResource LabelStandardowy}"/>
+                    <Label Grid.Row="2" Grid.Column="4" Content="do:" Style="{StaticResource LabelStandardowy}"/>
+                    <Label Grid.Row="3" Grid.Column="4" Content="do:" Style="{StaticResource LabelStandardowy}"/>
+                    <Label Grid.Row="4" Grid.Column="4" Content="do:" Style="{StaticResource LabelStandardowy}"/>
+
+                    <ComboBox Grid.Row="1" Grid.Column="5" Style="{StaticResource ComboBoxStandardowy}"/>
+                    <ComboBox Grid.Row="2" Grid.Column="5" Style="{StaticResource ComboBoxStandardowy}"/>
+                    <ComboBox Grid.Row="3" Grid.Column="5" Style="{StaticResource ComboBoxStandardowy}"/>
+                    <ComboBox Grid.Row="4" Grid.Column="5" Style="{StaticResource ComboBoxStandardowy}"/>
+
+                </Grid>
+
+                <Grid Grid.Column="2" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Column="0" Grid.Row="0" Content="Magazyn" Style="{StaticResource ButtonStandardowy}"/>
+                    <Button Grid.Column="0" Grid.Row="1" Content="Kontrahent" Style="{StaticResource ButtonStandardowy}"/>
+
+                    <ComboBox Grid.Column="1" Grid.Row="0" Style="{StaticResource ComboBoxStandardowy}"/>
+                    <ComboBox Grid.Column="1" Grid.Row="1" Style="{StaticResource ComboBoxStandardowy}"/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2">
+                <StackPanel Orientation="Horizontal">
+                    <Button Width="30" Height="30" Margin="5"/>
+                    <Button Width="30" Height="30" Margin="5"/>
+                    <Button Width="30" Height="30" Margin="5"/>
+                    <Button Width="30" Height="30" Margin="5"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
